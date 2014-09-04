@@ -1,6 +1,10 @@
 #ifndef TWODARRAY_H
 #define TWODARRAY_H
 
+#include <iostream>
+#include <cstdlib>   // Needed for the exit function
+#include <string>
+
 class TwoDArray
 {
 private:
@@ -10,8 +14,9 @@ private:
 
 public:
     TwoDArray(int,int);
-    char *toString();
+    std::string toString(int **,int,int);
     void destroy(int **,int);
+    void printArray(int**,int,int);
 };
 
 #endif // TWODARRAY_H
