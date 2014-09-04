@@ -1,7 +1,7 @@
-#ifndef TWODIMENSIONALARRAY_H
-#define TWODIMENSIONALARRAY_H
+#ifndef TWODARRAY_H
+#define TWODARRAY_H
 
-class TWODIMENSIONALARRAY
+class TwoDArray
 {
 private:
     int numRows;  //number of rows
@@ -9,9 +9,9 @@ private:
     int **array;  //the 2-Dimensional array
 
 public:
-    TWODIMENSIONALARRAY(int,int);
+    TwoDArray(int,int);
     char *toString();
     void destroy(int **,int);
 };
 
-#endif // TWODIMENSIONALARRAY_H
+#endif // TWODARRAY_H

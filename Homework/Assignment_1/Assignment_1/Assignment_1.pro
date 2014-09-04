@@ -3,4 +3,4 @@ SOURCES += \
     twoDimensionalArray.cpp
 
 HEADERS += \
-    twoDimensionalArray.h
+    TwoDArray.h
