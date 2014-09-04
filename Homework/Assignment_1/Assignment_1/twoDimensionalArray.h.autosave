@@ -1,0 +1,17 @@
+#ifndef TWODIMENSIONALARRAY_H
+#define TWODIMENSIONALARRAY_H
+
+class TWODIMENSIONALARRAY
+{
+private:
+    int numRows;  //number of rows
+    int numCols;  //number of columns
+    int **array;  //the 2-Dimensional array
+
+public:
+    TWODIMENSIONALARRAY(int,int);
+    char *toString();
+    void destroy(int **,int);
+};
+
+#endif // TWODIMENSIONALARRAY_H
