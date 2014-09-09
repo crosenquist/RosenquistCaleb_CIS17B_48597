@@ -16,7 +16,7 @@ TwoDArray::TwoDArray(int numRows, int numCols)
     srand(static_cast<unsigned int>(time(0)));
 
     //Declare the 2-D Array
-        int ** array=new int*[numRows];
+        array=new int*[numRows];
         for(int row=0;row<numRows;row++){
             array[row]=new int[numCols];
         }
@@ -38,24 +38,32 @@ TwoDArray::TwoDArray(int numRows, int numCols)
         std::cout<<std::endl;
 }
 
-string TwoDArray::toString(int numRows, int numCols){
-    stringstream ss;
+std::string TwoDArray::toString(int numRows, int numCols){
+    std::stringstream ss;
 
-    for(int i=0;i<numRows;i++){
-        for(int j=0;j<numCols;j++){
-
+    for(int j=0;j<numCols;j++){
+        for(int i=0;i<numRows;i++){
+            ss << array[j][i];
+            if(i==9)
+                ss << "\n";
+            else
+                ss << " ";
         }
     }
+
+    return ss.str() ;
 }
 
-/*void printArray(int**array,int numRows,int numCols){
-    //Print the Array
-    cout<<endl;
+int **TwoDArray::getArray(){
+    return array;
+}
+
+void TwoDArray::destroy(){
+    //Destroy cols
     for(int row=0;row<numRows;row++){
-        for(int col=0;col<numCols;col++){
-            cout<<array[row][col]<<" ";
-        }
-        cout<<endl;
+        delete []array[row];
     }
-    cout<<endl;
-}*/
+    //Destroy row pointers
+    delete []array;
+}
+

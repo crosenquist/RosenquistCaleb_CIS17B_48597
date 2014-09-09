@@ -1,6 +1,6 @@
 SOURCES += \
     main.cpp \
-    twoDimensionalArray.cpp
+    TwoDArray.cpp
 
 HEADERS += \
     TwoDArray.h

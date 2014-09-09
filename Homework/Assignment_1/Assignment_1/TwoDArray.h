@@ -13,10 +13,12 @@ private:
     int **array;  //the 2-Dimensional array
 
 public:
-    TwoDArray(int,int);
-    std::string toString(int **,int,int);
+    TwoDArray(int,int);             //Constructor
+    std::string toString(int,int);
     void destroy(int **,int);
     void printArray(int**,int,int);
+    int **getArray();
+    void destroy();
 };
 
 #endif // TWODARRAY_H

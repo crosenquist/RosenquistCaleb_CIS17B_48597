@@ -26,15 +26,16 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    /*QApplication app(argc, argv);
-    QLabel *label = new QLabel("Hello Qt!");
-    label->show();
-    return app.exec();*/
-
     int rows = 10;
     int cols = 10;
 
     TwoDArray numberArray(rows, cols);
-    //numberArray.printArray();
-    //cout << "Hello User" << endl;
+    string array = numberArray.toString(rows, cols);
+
+    QApplication app(argc, argv);
+    QLabel *label = new QLabel(array.c_str()); //Converting the string into a character array before passing it in.
+    label->show();
+    return app.exec();
+
+    numberArray.destroy(); //destroys the memory allocated for the 2D array.
 }
