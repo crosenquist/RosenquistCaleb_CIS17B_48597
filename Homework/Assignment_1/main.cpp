@@ -4,18 +4,6 @@
  * Purpose: Assignment 1
 */
 
-/*#include <stdlib.h>
-#include <iostream>
-#include <QApplication>
-#include <QLabel>
-namespace std
-
-
-int main(int argc, char *argv[]){
-    cout << "Hello World" << endl;
-}
-*/
-
 #include <QApplication>
 #include <QLabel>
 #include <iostream>

@@ -27,6 +27,7 @@ TwoDArray::TwoDArray(int numRows, int numCols)
             }
         }
 
+        /*
         //Print the Array
         std::cout<<std::endl;
         for(int row=0;row<numRows;row++){
@@ -36,19 +37,24 @@ TwoDArray::TwoDArray(int numRows, int numCols)
             std::cout<<std::endl;
         }
         std::cout<<std::endl;
+        */
 }
 
 std::string TwoDArray::toString(int numRows, int numCols){
     std::stringstream ss;
 
+    ss << "<h1><center>2D-Array</center></h1><br>";
+
+    //Create the HTML table for the stringstream
+    ss << "<table width='200' border='1'>";
+
     for(int j=0;j<numCols;j++){
+        ss << "<tr>";
         for(int i=0;i<numRows;i++){
-            ss << array[j][i];
-            if(i==9)
-                ss << "\n";
-            else
-                ss << " ";
+            ss << "<th>" << array[j][i] << "</th>";
+
         }
+        ss << "</tr>";
     }
 
     return ss.str() ;
